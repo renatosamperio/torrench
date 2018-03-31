@@ -1,7 +1,10 @@
 """ Config module."""
 import logging
 import os
-from configparser import SafeConfigParser
+try:
+    from configparser import SafeConfigParser
+except ImportError:
+    from six.moves.configparser import SafeConfigParser
 
 from torrench.utilities.Common import Common
 

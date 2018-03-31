@@ -7,7 +7,10 @@ import subprocess
 import sys
 import time
 import webbrowser
-from configparser import SafeConfigParser
+try:
+    from configparser import SafeConfigParser
+except ImportError:
+    from six.moves.configparser import SafeConfigParser
 
 import colorama
 import requests
